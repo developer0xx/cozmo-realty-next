@@ -1,0 +1,9 @@
+#singleLead {
+	a {
+		color: #575757;
+		text-decoration: none;
+		&:hover {
+			color: black;
+		}
+	}
+}

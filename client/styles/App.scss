@@ -1,0 +1,39 @@
+@import '~bootstrap/scss/bootstrap';
+// @charset "UTF-8";
+
+$para-color: #666666;
+$black: #1b1b1b;
+$dark: #303030;
+$body-back: #ffffff;
+$font-size: 16px;
+$font-retina-size: 125%;
+
+// $primary-color: #752eb2; // cosmic
+// $primary-light-color: #976bae;
+// $primary-dark-color: #260c40;
+$primary-color: #000000; // cosmic
+$primary-opposite: #ffffff;
+$primary-light-color: rgba(0, 0, 0, 0.5);
+$primary-dark-color: #260c40;
+
+$font: 'Poppins';
+
+@import './globals.scss';
+@import './navbar.scss';
+@import './index.scss';
+@import './footer.scss';
+@import './dashboard.scss';
+@import './login.scss';
+@import './register.scss';
+@import './agents.scss';
+@import './coldcaller.scss';
+@import './lead.scss';
+@import './welcome.scss';
+@import './stripe.scss';
+@import './forgotPassword.scss';
+@import './accountUpdatePage.scss';
+@import './adminAccountUpdatePage.scss';
+@import './singledLead.scss';
+@import './temp.scss';
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');

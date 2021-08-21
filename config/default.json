@@ -1,0 +1,25 @@
+{
+	"mongoURI": "mongodb+srv://cozmorealty:vCNXWzK6LsMMHNcd@cluster0.qetcd.mongodb.net/cozmorealty?retryWrites=true&w=majority",
+	"cookieEncryptionKey": "A$sdw@#ckVEekm!daDEdaX",
+	"mailKey": {
+	   "user": "dev@cozmorealty.com",
+	   "pass": "Qlqjs1234!"
+	},
+	"geoCoderKey": {
+		"apiKey": "AIzaSyBv8-h6V-nLwkZQPPb8z3mHdijC09KwLmY"
+	},
+	"baseUrl": "http://localhost:3000",
+	"ReCaptchaKey": {
+	   "apikey": "6Ldgd98ZAAAAAC7zBDtKOFNeHUXQv-L8cCubt5hW"
+	},
+	"facebookOAuthKey": {
+		"clientID": "725934681362850",
+		"clientSecret": "ce81a84a63bf31d540cf13baed7eccc0",
+		"callbackURL": "/api/users/auth/facebook/callback"
+	},
+	"googleOAuthKey": {
+		"clientID": "774701538715-p7deq3585ushgnb02kjquhl17s2g5jb0.apps.googleusercontent.com",
+		"clientSecret": "RbKVYH9iLox5EwDvJcTUSRdY",
+		"callbackURL": "/api/users/auth/google/callback"
+	}
+ }

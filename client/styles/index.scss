@@ -1,0 +1,102 @@
+#home {
+	height: 100vh;
+	width: 100%;
+	background-image: url('../public/home/background.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.nav-tabs .nav-link,
+	.nav-tabs .nav-link {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.nav-tabs 
+	{
+		border-bottom: unset;
+		.nav-link {
+			background-color: rgba(0,0,0,0.5);
+			color: white;
+			.active {
+				border: unset;
+				border-color: unset;
+				background-color: rgba(0,0,0,0.9);
+			}
+			&:focus {
+				border: unset;
+				background-color: rgba(0,0,0,0.9);
+			}
+			&:hover {
+				border: unset;
+				background-color: rgba(0,0,0,0.9);
+			}
+		}
+	}
+	
+	.nav-tabs .nav-link.active {
+		border: unset;
+		border-color: unset;
+		background-color: rgba(0,0,0,0.9);
+	}
+
+	
+#searchBar {
+	.input-group {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		width: 100%;
+		border: #000000 solid 6px;
+	}
+	input {
+		font-size: 16px !important;
+		background: #fff;
+		border: 0 !important;
+		box-shadow: none !important;
+		padding: 0.5rem 1rem;
+		font-size: 1.25rem;
+		line-height: 1.5;
+		&:focus {
+			color: #495057;
+			outline: 0;
+		}
+	}
+	.input-group-append {
+		margin-left: -1px;
+	}
+	.input-group-append,
+	.input-group-prepend {
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.btn {
+		border: 0;
+		background-color: rgba(0,0,0,0.5);
+		color:white;
+		outline: none;
+		border-radius: 0;
+		&:hover {
+			background-color: rgba(0,0,0,1);
+		}
+	}
+}
+
+}
+
+#platform {
+	min-height: 100vh;
+}
+
+#services {
+	min-height: 100vh;
+}
+
+#about {
+	min-height: 100vh;
+}
+
+#contact {
+	min-height: 100vh;
+}

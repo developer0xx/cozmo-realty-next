@@ -1,0 +1,25 @@
+{
+	"mongoURI": "mongodb+srv://championlenders:mm5exbVSQtZKW9tE@championlenders.9xc0u.mongodb.net/cozmorealty?retryWrites=true&w=majority",
+	"cookieEncryptionKey": "dlrjs ahfmrpTwl? zzz QudTl$",
+	"mailKey": {
+		"user": "info@championlenders.com",
+		"pass": "Hyoung88$"
+	},
+	"geoCoderKey": {
+		"apiKey": "AIzaSyBv8-h6V-nLwkZQPPb8z3mHdijC09KwLmY"
+	},
+	"baseUrl": "https://championlenders.com",
+	"ReCaptchaKey": {
+		"apikey": "6Ldgd98ZAAAAAC7zBDtKOFNeHUXQv-L8cCubt5hW"
+	},
+	"facebookOAuthKey": {
+		"clientID": "408417083685496",
+		"clientSecret": "4ea9d5437edcb4ac6615fc37e6d185b8",
+		"callbackURL": "/api/users/auth/facebook/callback"
+	},
+	"googleOAuthKey": {
+		"clientID": "668654799635-s3cd438ujitvpbgr6salvc7jio6se2c8.apps.googleusercontent.com",
+		"clientSecret": "RjTj2CRolGTH0aXLpl7ruUhO",
+		"callbackURL": "/api/users/auth/google/callback"
+	}
+}

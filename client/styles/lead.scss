@@ -1,0 +1,494 @@
+#inventory {
+	.primary-font-color {
+		color: $dark;
+	}
+	.hover-effect {
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+
+	.apv {
+		position: absolute;
+		left: 0;
+		top: 10px;
+		background-color: $primary-color;
+		color: white;
+		padding: 2px 8px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	#inner-inventory {
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+
+		@media (min-width: 768px) {
+			overflow: unset;
+		}
+		.bg-illust-spill-wrapper {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+			.left-spill {
+				width: 455.65px;
+				height: 501.5px;
+				background-size: 455.65px 501.5px;
+				background-repeat: no-repeat;
+				background-image: url(/icons/investors-list-bg.png);
+			}
+			@media (max-width: 660px) {
+				display: none;
+			}
+		}
+		.bg-illust-waffle-wrapper {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+			z-index: 0;
+			@media (max-width: 660px) {
+				display: none;
+			}
+			.left-bot-waffle {
+				width: 92px;
+				height: 92px;
+				background-size: 92px 92px;
+				background-repeat: no-repeat;
+				background-image: url(/icons/investors-list-waffle-left-bot.png);
+				position: absolute;
+				left: 75px;
+				bottom: 37px;
+			}
+			.right-bot-waffle {
+				@media (max-width: 660px) {
+					display: none;
+				}
+				z-index: 0;
+				width: 92px;
+				height: 48px;
+				background-size: 92px 48px;
+				background-repeat: no-repeat;
+				background-image: url(/icons/investors-list-waffle-right-bot.png);
+				position: absolute;
+				left: 575px;
+				bottom: -13px;
+			}
+		}
+
+		#list {
+			order: 2;
+
+			@media (min-width: 768px) {
+				margin: auto;
+			}
+
+			@media (min-width: 1200px) {
+				order: 1;
+				margin: 0px 20px;
+			}
+
+			#dropdown-item-button {
+				background: #ffffff;
+				border: 1px solid #dddddd;
+				box-sizing: border-box;
+				border-radius: 3px;
+				color: $para-color;
+				font-size: $font-size;
+				line-height: 21px;
+				width: 100%;
+				text-align: left;
+			}
+
+			.dropdown-menu.show {
+				width: 100%;
+			}
+
+			.pagination {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				justify-content: center;
+				.page-item {
+					margin-right: 5px;
+					margin-left: 5px;
+					&:first-child {
+						margin-right: 5px;
+						margin-left: 0px;
+					}
+					&:last-child {
+						margin-left: 5px;
+						margin-right: 0px;
+					}
+					.page-link {
+						background: #ffffff;
+						border: 1px solid #dddddd;
+						box-sizing: border-box;
+						border-radius: 1px;
+						color: $para-color;
+
+						&:hover {
+							background-color: $primary-color !important;
+							color: white;
+						}
+					}
+				}
+				.page-item.active {
+					.page-link {
+						background-color: $primary-color !important;
+						color: white;
+					}
+				}
+			}
+
+			.property-icon-wrapper {
+				
+				.property-icon-img {
+					object-fit: fill;
+				}
+
+			}
+		}
+	}
+}
+
+#searchbar {
+	.search-left {
+		padding-right: 0px;
+		padding-left: 0px;
+		padding-bottom: 8px;
+
+		&.search-subsection {
+			padding-right: 4px;
+			padding-bottom: 0;
+		}
+
+		@media (min-width: 576px) {
+			padding-right: 4px;
+		}
+	}
+
+	.search-right {
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 8px;
+
+		&.search-subsection {
+			padding-left: 4px;
+			padding-bottom: 0;
+		}
+
+		@media (min-width: 576px) {
+			padding-left: 4px;
+		}
+	}
+
+	.rbt-input-main {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+
+		&:focus {
+			outline: none;
+			border-color: #ced4da;
+			box-shadow: none;
+		}
+	}
+
+	.dropdown-toggle {
+		width: 100%;
+
+		&:focus {
+			outline: none;
+			border-color: unset;
+			box-shadow: none;
+		}
+	}
+
+	.search-property-type {
+	}
+}
+
+#map {
+	position: inherit;
+	top: 71px;
+	height: 100%;
+	flex: 0 0 100%;
+	order: 1;
+	display: none;
+	z-index: 20;
+
+	@media (min-width: 768px) {
+		display: block;
+	}
+
+	@media (min-width: 1200px) {
+		flex-basis: 0;
+		flex-grow: 1;
+		order: 2;
+		position: sticky;
+	}
+
+	#inner-map {
+		height: 500px;
+
+		@media (min-width: 1200px) {
+			height: calc(100vh - 71px);
+		}
+		.w-auto {
+			width: auto;
+		}
+
+		.label-chip {
+			display: inline-block;
+			background: $primary-color;
+			border: 1px solid $primary-color;
+			box-sizing: border-box;
+			box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+			border-radius: 49px;
+			padding: 4px 8px;
+			align-items: center;
+			z-index: 50;
+			width: auto;
+			position: relative;
+			span {
+				text-decoration: none;
+				font-style: normal;
+				font-family: Poppins;
+				font-weight: 900;
+				font-size: 12px;
+				line-height: 16px;
+				color: white;
+				text-decoration: none;
+			}
+			&:hover {
+				border: 1px solid white;
+				color: $dark;
+				background-color: white;
+				text-decoration: none;
+			}
+		}
+
+		.selected {
+			background-color: white;
+			border: 1px solid white;
+			z-index: 51;
+			span {
+				color: $dark;
+			}
+		}
+
+		.card-modal {
+			border-radius: 5px;
+			padding-right: 0;
+			padding-left: 0;
+			width: 225px;
+			z-index: 999;
+			position: absolute;
+			top: 50px;
+			left: -52px;
+			.container-fluid {
+				padding-right: 0;
+				padding-left: 0;
+			}
+			.row {
+				margin-right: 0;
+				margin-left: 0;
+			}
+			.col {
+				padding: 0;
+			}
+
+			.header {
+				margin-right: 0;
+				margin-left: 0;
+			}
+			.invest-cta {
+				color: $dark;
+			}
+
+			.content {
+				font-family: 'Poppins';
+				font-weight: 400;
+				margin: 8px 8px 8px 8px;
+				color: $para-color;
+				font-style: normal;
+			}
+			.invest-card-subhead {
+				font-size: 12px;
+				line-height: 18px;
+			}
+			.invest-amt-val {
+				font-weight: 600;
+				font-size: $font-size;
+				line-height: 21px;
+				color: $primary-color;
+			}
+			.invest-interest {
+				font-weight: 600;
+				font-size: 10px;
+				line-height: 15px;
+				width: 100%;
+			}
+			.mx-21px {
+				padding-right: 21px;
+				padding-left: 21px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			strong {
+				font-weight: 500;
+				color: $dark;
+			}
+		}
+	}
+}
+
+#list {
+	max-width: 690px;
+	margin: auto;
+
+	@media (min-width: 340px) {
+		margin: 0px 20px;
+		order: 2;
+	}
+
+	@media (min-width: 1200px) {
+		order: 1;
+	}
+
+	.row {
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.col {
+		padding: 0;
+	}
+	
+	.property-label-placeholder {
+		width: 50px;
+	}
+	
+	.lead-label-fonts {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 28px;
+		overflow: hidden;
+	}
+
+	.property {
+		padding-right: 0;
+		padding-left: 0;
+		box-shadow: 0px 2px 0px #dddddd;
+		border-radius: 3px;
+		margin: 10px 0px;
+
+		.max-h-211px {
+			max-height: 211px;
+		}
+		.container-fluid {
+			padding-right: 0;
+			padding-left: 0;
+		}
+		.row {
+			margin-right: 0;
+			margin-left: 0;
+			@media (max-width: 769px) {
+				.col-12 {
+					padding-left: 0;
+					padding-right: 0;
+					.carousel {
+						margin-left: 0;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		.col {
+			padding: 0;
+		}
+		.p-15px {
+			padding: 15px;
+		}
+		.px-15px {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+		.my-5px {
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+
+		.content {
+			margin-top: 7px;
+			margin-bottom: 7px;
+			padding-right: 0px;
+			width: 100%;
+			display: flex;
+			.left-col {
+				width: 100%;
+			}
+			.right-col {
+				width: 0;
+				position: relative;
+				.loan {
+					position: absolute;
+					right: 0;
+					bottom: 0;
+				}
+			}
+			.invest-type {
+				font-size: 12px;
+				line-height: 19px;
+				@media (min-width: 450px) {
+					font-size: $font-size;
+					line-height: 21px;
+				}
+			}
+
+			.lead-desc-fonts {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 25px;
+				overflow: hidden;
+			}
+			.invest-details {
+				font-size: 12px;
+				line-height: 19px;
+				@media (min-width: 450px) {
+					font-size: $font-size;
+					line-height: 21px;
+				}
+				color: $para-color;
+			}
+
+			.invest-amt-val {
+				font-size: 16px;
+				line-height: 23px;
+				@media (min-width: 450px) {
+					font-size: 19px;
+					line-height: 25.5px;
+				}
+			}
+			@media (max-width: 596px) {
+				padding-left: 0 !important;
+			}
+		}
+
+		.gradient {
+			margin-top: 8.86px;
+			margin-bottom: 12.65px;
+			height: 2px;
+		}
+
+		.carousel.slide {
+			margin: 0 auto;
+		}
+
+		.carousel-inner {
+			border-radius: 8px;
+		}
+	}
+}

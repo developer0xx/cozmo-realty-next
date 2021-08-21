@@ -1,0 +1,312 @@
+
+html {
+	overflow-x: hidden;
+	width: 100%;
+	font-size: 12px;
+	font-size: $font-size;
+	scroll-behavior: smooth;
+	background-color: $body-back;	
+}
+
+body {
+	font-size: $font-size;
+	font-family: $font;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 21px;
+	background-color: $body-back;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+body.landing-page-layout {
+	overflow: unset;
+}
+
+#layout > body {
+	overflow-y: unset;
+}
+
+
+h1 {
+	text-transform: capitalize;
+	letter-spacing: 0px;
+	font-size: 55px;
+	line-height: 1.1;
+	font-weight: 400;
+
+	@media (max-width: 991px) {
+		font-size: 45px;
+		line-height: 1.1;
+	}
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 1.2;
+
+	@media (max-width: 991px) {
+		font-size: 1.7rem;
+		line-height: 1.2;
+	}
+}
+
+p {
+	font-size: 16px;
+	line-height: 24px;
+
+	@media (max-width: 991px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+footer li {
+	font-size: 16px;
+	line-height: 24px;
+
+	@media (max-width: 991px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.light {
+	color: white;
+}
+
+.dark {
+	color: black !important;
+}
+
+.dark-background {
+	background-color: #171717;
+}
+
+button:focus {
+	outline: unset;
+}
+
+button.primary {
+	padding: 10px 20px;
+	border-radius: 0px;
+	border: unset;
+	font-family: $font;
+	background-color: $primary-color;
+	&:hover {
+	  background-color: $primary-opposite;
+	  color: $primary-color;
+	  border: 2px solid $primary-color;
+	  padding: 8px 18px;
+	}
+
+}
+
+button.primary.opposite {
+	padding: 10px 20px;
+	border-radius: 0px;
+	border: unset;
+	font-family: $font;
+	color: $primary-color;
+	background-color: $primary-opposite;
+	&:hover {
+	  background-color: $primary-light-color;
+	  color: $primary-opposite;
+	  border: 2px solid $primary-opposite;
+	  padding: 8px 18px;
+	}
+}
+  button.primary-border {
+	padding: 10px 20px;
+	border-radius: 50px;
+	border: $primary-color 1px solid;
+	font-family: $font;
+	background-color: white;
+	color: $black;
+	&:hover {
+	  background-color: unset;
+	  border: $primary-color 1px solid;
+	  background-color: white;
+	  color: $black;
+	}
+  }
+
+.row .col.p0,
+.row .p0 {
+	padding: 0;
+}
+
+#hero {
+	height: 25vh;
+	width: 100%;
+}
+
+.mt-5 {
+	margin-top: 2rem !important;
+}
+
+.mt-6 {
+	margin-top: 2.5rem !important;
+}
+
+.mb-8px {
+	margin-bottom: 8px;
+}
+
+.mt-99px {
+	margin-top: 99px;
+}
+
+.font-size-14 {
+	font-size: 14px;
+}
+
+.min-h-100 {
+	min-height: 100px;
+}
+
+.object-fit-cover {
+	object-fit: cover;
+}
+
+.border-radius-right-0 {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.border-radius-left-0 {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+
+// XSmall devices ( phones, 0px and up)
+@media (max-width: 575px) {
+	//sm
+	.w-xs-100 {
+		width: 100%;
+	}
+	.mt-xs-5 {
+		margin-top: 2rem !important;
+	}
+	.mt-xs-6 {
+		margin-top: 2.5rem !important;
+	}
+	.d-xs-none {
+		display: none !important;
+	}
+	.d-xs-flex {
+		display: -webkit-flex !important;
+		display: -moz-box !important;
+		display: flex !important;
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767px) {
+	//sm
+	.w-sm-100 {
+		width: 100% !important;
+	}
+	.mt-sm-5 {
+		margin-top: 2rem !important;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) {
+	//md
+	.w-md-100 {
+		width: 100%;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 1199px) {
+	//lg
+	.w-lg-100 {
+		width: 100%;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	//xl
+	.w-xl-100 {
+		width: 100%;
+	}
+}
+
+.square {
+	width: 100%;
+	padding-bottom: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.card-border-disabled {
+	border: 0px solid;
+}
+
+.form-logo {
+	width: 150px;
+	height: auto;
+	margin-bottom: 20px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.ta-left {
+	text-align: left;
+}
+
+.ta-right {
+	text-align: right;
+}
+
+.ta-center {
+	text-align: center;
+}
+
+.header-size-reduced {
+	font-size: 40px;
+
+	@media (max-width: 991px) {
+		font-size: 35px;
+		line-height: 1.1;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 30px;
+		line-height: 1.1;
+	}
+}
+
+.strong {
+	font-weight: 600;
+}
+
+.btn:focus,
+.btn.focus {
+	box-shadow: unset;
+}
+
+.no-deco {
+	text-decoration: none;
+	color: unset;
+	&:hover {
+		text-decoration: unset;
+		color: unset;
+	}
+}
+
+// .white {
+// 	color: white;
+// }

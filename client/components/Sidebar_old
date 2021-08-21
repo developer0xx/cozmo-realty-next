@@ -1,0 +1,123 @@
+import React, { useState, useEffect } from 'react';
+import { makeStyles, withStyles, useTheme } from '@material-ui/core/styles';
+import Link from 'next/link';
+
+import { List, Divider, IconButton, ListItemIcon, ListItemText, ListItem } from '@material-ui/core/';
+import MuiDrawer from '@material-ui/core/Drawer';
+import { ChevronLeft, ChevronRight, InsertDriveFile, Person, People } from '@material-ui/icons/';
+import DeleteIcon from '@material-ui/icons/Delete';
+import { isAuth } from '../actions/auth';
+import {Nav} from "react-bootstrap";
+
+const AdminMenu = () => {
+	return (
+		<>
+			<List>
+				<Link href={'/dashboard/admin/users'}>
+					<ListItem button>
+						<ListItemIcon>
+							<People />
+						</ListItemIcon>
+						<ListItemText primary={'All Users'} />
+					</ListItem>
+				</Link>
+			</List>
+			<List>
+				<Link href={'/dashboard/admin/requests'}>
+					<ListItem button>
+						<ListItemIcon>
+							<InsertDriveFile />
+						</ListItemIcon>
+						<ListItemText primary={'All Requests'} />
+					</ListItem>
+				</Link>
+			</List>
+		</>
+	);
+};
+
+const Sidebar = props => {
+		return (
+			<Drawer
+				className={classes.drawer}
+				variant="persistent"
+				anchor="left"
+				open={open}
+				classes={{
+					paper: classes.drawerPaper,
+				}}
+			>
+				<div className={classes.drawerHeader}>
+					<IconButton onClick={handleDrawerClose}>{theme.direction === 'ltr' ? <ChevronLeft /> : <ChevronRight />}</IconButton>
+				</div>
+				{/*<Divider />
+				<List>
+					<Link href={'/dashboard/'}>
+						<ListItem button>
+							<ListItemIcon>
+								<InsertDriveFile />
+							</ListItemIcon>
+							<ListItemText primary={'Dashboard'} />
+						</ListItem>
+					</Link>
+				</List>
+				 <List>
+					<Link href={'/dashboard/network'}>
+						<ListItem button>
+							<ListItemIcon>
+								<InsertDriveFile />
+							</ListItemIcon>
+							<ListItemText primary={'Network'} />
+						</ListItem>
+					</Link>
+				</List> 
+				<List>
+					<Link href={'/dashboard/e-wallet'}>
+						<ListItem button>
+							<ListItemIcon>
+								<InsertDriveFile />
+							</ListItemIcon>
+							<ListItemText primary={'E-Wallet'} />
+						</ListItem>
+					</Link>
+				</List>*/}
+				<List>
+					<Link href={'/dashboard/user/referral'}>
+						<ListItem button>
+							<ListItemIcon>
+								<InsertDriveFile />
+							</ListItemIcon>
+							<ListItemText primary={'Refer a Friend'} />
+						</ListItem>
+					</Link>
+				</List>
+				<Divider />
+				<List>
+					<Link href={'/dashboard/user/my-requests'}>
+						<ListItem button>
+							<ListItemIcon>
+								<InsertDriveFile />
+							</ListItemIcon>
+							<ListItemText primary={'My Requests'} />
+						</ListItem>
+					</Link>
+				</List>
+				<List>
+					<Link href="/dashboard/user/my-account/">
+						<ListItem button>
+							<ListItemIcon>
+								<Person />
+							</ListItemIcon>
+							<ListItemText primary={'My Account'} />
+						</ListItem>
+					</Link>
+				</List>
+				<Divider />
+				{/* {currentUserData.role === 'admin' ? <AdminMenu /> : null} */}
+				<AdminMenu />
+			</Drawer>
+		);
+	}
+};
+
+export default Sidebar;

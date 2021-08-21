@@ -1,0 +1,1 @@
+ssh -i ./realty.pem ubuntu@ec2-54-183-147-235.us-west-1.compute.amazonaws.com

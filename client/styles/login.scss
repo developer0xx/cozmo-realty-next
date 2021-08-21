@@ -1,0 +1,84 @@
+#login-form {
+
+	min-height: calc(100vh - 4rem);
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+
+	@media (max-width: 575px) {
+		min-height: unset
+	}
+
+	.form-paper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media (max-width: 575px) {
+			padding-top: 80px;
+    		padding-bottom: 160px;
+		}
+
+		.form-title {
+			font-size: 2rem;
+			font-weight: 400;
+			line-height: 1.334;
+			letter-spacing: 0em;
+		}
+	
+		.form-wrapper {
+			width: 100%; // Fix IE 11 issue.
+			margin-top: 0;
+
+			.form-input {
+				margin-top: 15px;
+
+				h5 {
+					@media (max-width: 575px) {
+						margin: 0;
+					}
+				}
+			}
+
+			.oauth-logins {
+				.facebook-button {
+					background-color: #3B5998;
+					color: white;
+					border: 1px solid #3B5998;
+					&:hover {
+						background-color: white;
+						color: #3B5998;
+						border: 1px solid #3B5998;
+					}
+				}
+
+				.google-button {
+					background-color: white;
+					border: 1px solid #676767;
+					color: #171717;
+					&:hover {
+						background-color: #171717;
+						border: 1px solid #171717;
+						color: white;
+					}
+				}
+
+				// Just in case we might add more oAuths
+				.form-input:nth-child(odd) {
+					padding-right: 5px;
+					@media (max-width: 575px) {
+						padding-right: 0;
+					}
+				}
+				
+				.form-input:nth-child(even) {
+					padding-left: 5px;
+					@media (max-width: 575px) {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}

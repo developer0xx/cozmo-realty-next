@@ -1,0 +1,274 @@
+// Mobile Nav Start
+.sidenav {
+	height: 100vh;
+	width: 0;
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	right: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav.hidden {
+	width: 0px;
+}
+
+.sidenav.visible {
+	width: 250px;
+}
+
+.sidenav button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sidenav .dropdown-toggle::after {
+	display: none;
+}
+.sidenav li {
+	padding-left: 24px;
+}
+.sidenav a {
+	text-decoration: none;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+.dropdown a:hover {
+	color: black;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	border: unset;
+	background-color: unset;
+	color: #818181;
+	&:hover {
+		color: white;
+	}
+	&:focus {
+		outline: unset;
+	}
+}
+
+.sidenav hr {
+	border-top: 1px solid white;
+}
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+
+.user-profile-image {
+	border-radius: 50%;
+}
+
+.bg-black {
+	background-color: rgb(0, 0, 0, 0.6);
+}
+
+.navbar {
+	padding: 1rem;
+}
+.my-account {
+	position: absolute;
+	right: 0;
+}
+
+.dropdown-toggle::after {
+	position: absolute;
+	top: 15px;
+}
+.navbar-collapse {
+	position: relative;
+}
+
+.nav-logo {
+	width: 170px !important;
+	height: 67px;
+}
+@media screen and (max-width: 767px) {
+	.nav-logo {
+		width: auto !important;
+	}
+}
+.navbar-dark .navbar-toggler {
+	border: unset;
+}
+.navbar-dark .navbar-toggler:hover {
+	color: white;
+}
+.navbar-dark .navbar-toggler:focus {
+	outline: unset;
+}
+.navbar #dropdown-basic {
+	background-color: unset;
+	border-color: unset;
+	border: unset;
+	padding: 0;
+	&:hover {
+		box-shadow: unset;
+		background-color: unset;
+	}
+	&:focus {
+		box-shadow: unset;
+	}
+}
+@media (min-width: 768px) {
+	.navbar-expand-md .navbar-nav .nav-link {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+}
+
+// DASHBOARD NAVBAR
+#dashboardNav {
+	.dropdown-toggle::after {
+		color: black;
+	}
+
+	.dropdown-toggle::after {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.navbar-toggler {
+		border: 0;
+	}
+
+	.border-b-1 {
+		border-bottom: 1px solid #dee2e6;
+	}
+}
+
+// DASHBOARD SIDEBAR
+.sidebar {
+	height: 100%;
+	overflow: auto;
+	.nav-item a {
+		color: #575757;
+
+		&:hover {
+			color: black;
+		}
+		.MuiSvgIcon-root {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			margin-bottom: 2px;
+			margin-left: 2px;
+		}
+	}
+	.border-b-1 {
+		border-bottom: 1px solid #dee2e6;
+	}
+	.nav-item a span {
+		text-transform: capitalize;
+	}
+	.group-title {
+		font-size: 10px;
+		text-transform: uppercase;
+		margin-left: 12px;
+		line-height: 18px;
+		font-weight: 600;
+		color: #acacac;
+		margin-top: 8px;
+		display: block;
+	}
+	.profile {
+		position: absolute;
+		left: 50px;
+		bottom: 50px;
+
+		.user-profile-image {
+			cursor: pointer;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		span {
+			color: #575757;
+			cursor: pointer;
+			&:hover {
+				color: black;
+			}
+		}
+		a div:nth-child(1) {
+			overflow: visible !important;
+		}
+	}
+}
+
+// DASHBOARD MOBILE NAVBAR
+#mobileNav {
+	.modal-body {
+		padding: 0;
+	}
+	a {
+		text-decoration: none !important;
+	}
+	.nav-item {
+		padding: 10px;
+		text-transform: capitalize;
+		text-decoration: none;
+
+		a {
+			color: #575757;
+
+			&:hover {
+				color: black;
+			}
+			.MuiSvgIcon-root {
+				font-size: 1.5rem;
+				line-height: 1.5rem;
+				margin-bottom: 2px;
+				margin-left: 2px;
+			}
+		}
+		.ml-2px {
+			color: #575757;
+			cursor: pointer;
+
+			&:hover {
+				color: black;
+			}
+			.MuiSvgIcon-root {
+				font-size: 1.5rem;
+				line-height: 1.5rem;
+				margin-bottom: 2px;
+				margin-left: 2px;
+			}
+		}
+	}
+	.group-title {
+		font-size: 10px;
+		text-transform: uppercase;
+		margin-top: -4px;
+		margin-left: 2px;
+		line-height: 18px;
+		font-weight: 600;
+		color: #acacac;
+		display: block;
+	}
+
+	.border-b-1 {
+		border-bottom: 1px solid #dee2e6;
+	}
+}

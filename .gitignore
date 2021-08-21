@@ -1,0 +1,11 @@
+node_modules
+# dev.js
+# mailKey.js
+# default.json
+ server_logs
+.DS_Store
+.env
+# setupProxy.js
+ .vscode/
+# production.json
+.idea
